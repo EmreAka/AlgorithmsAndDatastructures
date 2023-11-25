@@ -7,23 +7,17 @@ console.log(index);
 
 
 function binarySearch(searchNumber: number, numbers: number[]): number {
-    let left = 0
-    let right = numbers.length - 1
+    let left = 0;
+    let right = numbers.length - 1;
 
     while (left <= right) {
-        let mid = Math.round(left + (right-left / 2))
+        const mid = Math.floor(left + (right - left / 2))
 
-        if (searchNumber === numbers[mid]) {
-            return mid
-        }
+        if (searchNumber === numbers[mid]) return mid;
 
-        else if (searchNumber > numbers[mid]) {
-            left = mid + 1
-        }
+        else if (searchNumber > numbers[mid]) left = mid + 1
 
-        else {
-            right = mid - 1
-        }
+        else right = mid - 1
     }
 
     return -1
