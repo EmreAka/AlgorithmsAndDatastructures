@@ -61,11 +61,42 @@ class MyNode {
             this.right.printInOrder()
         }
     }
+
+    printPreOrder() {
+        console.log(this.data)
+
+        if (this.left !== undefined) {
+            this.left.printInOrder()
+        }
+
+        if (this.right !== undefined) {
+            this.right.printInOrder()
+        }
+    }
+
+    printPostOrder() {
+        if (this.left !== undefined) {
+            this.left.printInOrder()
+        }
+
+        if (this.right !== undefined) {
+            this.right.printInOrder()
+        }
+
+        console.log(this.data)
+    }
 }
 
 const myNode = new MyNode(10)
-myNode.insert(5)
-myNode.insert(15)
-myNode.insert(8)
+myNode.insert(9)
+myNode.insert(11)
 
+console.log("In Order: ")
 myNode.printInOrder()
+
+console.log("Pre Order: ")
+myNode.printPreOrder()
+
+console.log("Post Order: ")
+myNode.printPostOrder()
+
