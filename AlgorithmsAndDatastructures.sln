@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubbleSort", "BubbleSort\BubbleSort.csproj", "{54FB2A36-7561-4584-A28A-A1F686839B19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepthFirstAndBreadthFirstSearch", "DepthFirstAndBreadthFirstSearch\DepthFirstAndBreadthFirstSearch.csproj", "{BE59BFE2-6D78-4E48-8152-283713651DC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{54FB2A36-7561-4584-A28A-A1F686839B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54FB2A36-7561-4584-A28A-A1F686839B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54FB2A36-7561-4584-A28A-A1F686839B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE59BFE2-6D78-4E48-8152-283713651DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE59BFE2-6D78-4E48-8152-283713651DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE59BFE2-6D78-4E48-8152-283713651DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE59BFE2-6D78-4E48-8152-283713651DC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
