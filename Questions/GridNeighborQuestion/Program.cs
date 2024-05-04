@@ -11,57 +11,58 @@ PrintGrid(input);
 var result = GetNeighbors(input);
 Console.WriteLine("Neighbors:");
 PrintGrid(result);
-
 return;
-
 
 static char[,] GetNeighbors(char[,] input)
 {
+    var gridCells = FindNeighbors(input);
     var length = input.GetLongLength(0) * input.GetLongLength(1) + 1;
-    var neighbors = FindNeighbors(input);
-    var emptyGrid = CreateEmptyGrid(input, length);
-    var neighborsGrid = CreateNeighborsGrid(emptyGrid, neighbors);
+    var result = CreateEmptyGrid(input, length);
 
-    return neighborsGrid;
-}
-
-static char[,] CreateNeighborsGrid(char[,] input, List<GridCell> gridCells)
-{
     foreach (var gridCell in gridCells)
     {
-        (long x, long y) valueIndex = (0, 0);
-
-        for (var i = 0; i < input.GetLongLength(0); i++)
-        {
-            var value = input[0, i];
-
-            if (value == gridCell.Value)
-            {
-                valueIndex = (0, i);
-                break;
-            }
-        }
+        var valueIndex = FindValueIndex(result, gridCell.Value);
 
         foreach (var neighborOfValue in gridCell.Neighbors)
         {
-            (long x, long y) neighborValueIndex = (0, 0);
+            var neighborIndex = FindNeighborIndex(result, neighborOfValue);
 
-            for (var i = 0; i < input.GetLongLength(1); i++)
-            {
-                var value = input[i, 0];
-
-                if (value == neighborOfValue)
-                {
-                    neighborValueIndex = (i, 0);
-                    break;
-                }
-            }
-
-            input[neighborValueIndex.x, valueIndex.y] = '1';
+            result[neighborIndex.x, valueIndex.y] = '1';
+            result[neighborIndex.y, valueIndex.x] = '1';
         }
     }
 
-    return input;
+    return result;
+}
+
+static (long x, long y) FindValueIndex(char[,] grid, char target)
+{
+    for (var i = 0; i < grid.GetLongLength(0); i++)
+    {
+        var value = grid[0, i];
+
+        if (value == target)
+        {
+            return (0, i);
+        }
+    }
+
+    return (0, 0);
+}
+
+static (long x, long y) FindNeighborIndex(char[,] grid, char target)
+{
+    for (var i = 0; i < grid.GetLongLength(1); i++)
+    {
+        var value = grid[i, 0];
+
+        if (value == target)
+        {
+            return (i, 0);
+        }
+    }
+
+    return (0, 0);
 }
 
 static List<GridCell> FindNeighbors(char[,] input)
