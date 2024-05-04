@@ -5,19 +5,13 @@
     {'5', '8'}
 };
 
-Console.WriteLine("Input:");
-PrintGrid(input);
-
-var result = GetNeighbors(input);
-Console.WriteLine("Neighbors:");
-PrintGrid(result);
+PrintGrid(GetNeighbors(input));
 return;
 
 static char[,] GetNeighbors(char[,] input)
 {
     var gridCells = FindNeighbors(input);
-    var length = input.GetLongLength(0) * input.GetLongLength(1) + 1;
-    var result = CreateEmptyGrid(input, length);
+    var result = CreateEmptyGrid(input);
 
     foreach (var gridCell in gridCells)
     {
@@ -67,7 +61,8 @@ static (long x, long y) FindNeighborIndex(char[,] grid, char target)
 
 static List<GridCell> FindNeighbors(char[,] input)
 {
-    var result = new List<GridCell>();
+    var length = input.GetLength(0) * input.GetLength(1);
+    var result = new List<GridCell>(capacity: length);
 
     var columns = input.GetLongLength(0);
     var rows = input.GetLongLength(1);
@@ -102,8 +97,9 @@ static List<GridCell> FindNeighbors(char[,] input)
     return result;
 }
 
-static char[,] CreateEmptyGrid(char[,] input, long length)
+static char[,] CreateEmptyGrid(char[,] input)
 {
+    var length = input.GetLongLength(0) * input.GetLongLength(1) + 1;
     var result = new char[length, length];
 
     for (var x = 0; x < length; x++)
