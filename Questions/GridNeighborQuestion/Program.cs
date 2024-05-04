@@ -143,7 +143,7 @@ static void PrintGrid(char[,] grid)
 internal class GridCell
 {
     public char Value { get; private set; }
-    public List<char> Neighbors { get; private set; } = new();
+    public List<char> Neighbors { get; init; } = [];
 
     public GridCell(char value)
     {
