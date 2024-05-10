@@ -8,7 +8,7 @@ node.Insert(21);
 var result = node.Contains(5);
 Console.WriteLine(result);
 
-node.PrintInOrder();
+node.PrintPreOrder();
 
 internal record Node(int Data)
 {
@@ -32,7 +32,7 @@ internal record Node(int Data)
     public bool Contains(int data)
     {
         if (data == Data) return true;
-        
+
         if (data < Data)
         {
             if (Left is null) return false;
@@ -46,27 +46,27 @@ internal record Node(int Data)
     public void PrintInOrder()
     {
         Left?.PrintInOrder();
-        
+
         Console.WriteLine(Data);
-        
+
         Right?.PrintInOrder();
     }
-    
+
     public void PrintPreOrder()
     {
         Console.WriteLine(Data);
-        
-        Left?.PrintInOrder();
-        
-        Right?.PrintInOrder();
+
+        Left?.PrintPreOrder();
+
+        Right?.PrintPreOrder();
     }
-    
+
     public void PrintPostOrder()
     {
-        Left?.PrintInOrder();
-        
-        Right?.PrintInOrder();
-        
+        Left?.PrintPostOrder();
+
+        Right?.PrintPostOrder();
+
         Console.WriteLine(Data);
     }
 }
