@@ -10,10 +10,12 @@ static int BinarySearch(Span<int> source, int target)
     while (span.LeftIndex <= span.RightIndex)
     {
         span.CalculateMiddleIndex();
+        
+        var middleValue = source[span.MiddleIndex];
 
-        if (source[span.MiddleIndex] == target) return span.MiddleIndex;
-        if (source[span.MiddleIndex] < target) span.MoveRight();
-        if (source[span.MiddleIndex] > target) span.MoveLeft();
+        if (middleValue == target) return span.MiddleIndex;
+        if (middleValue < target) span.MoveRight();
+        if (middleValue > target) span.MoveLeft();
     }
     
     return -1;
