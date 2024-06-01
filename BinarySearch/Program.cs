@@ -1,6 +1,6 @@
 ﻿Span<int> sortedList = stackalloc int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-Console.WriteLine(BinarySearch(sortedList, 9));
+Console.WriteLine(BinarySearch(sortedList, 5));
 return;
 
 static int BinarySearch(Span<int> source, int target)
@@ -9,8 +9,6 @@ static int BinarySearch(Span<int> source, int target)
 
     while (span.LeftIndex <= span.RightIndex)
     {
-        span.CalculateMiddleIndex();
-        
         var middleValue = source[span.MiddleIndex];
 
         if (middleValue == target) return span.MiddleIndex;
@@ -35,7 +33,17 @@ internal ref struct Span
         CalculateMiddleIndex();
     }
 
-    public void CalculateMiddleIndex() => MiddleIndex = LeftIndex + (RightIndex - LeftIndex) / 2;
-    public void MoveRight() => LeftIndex = MiddleIndex + 1;
-    public void MoveLeft() => RightIndex = MiddleIndex - 1;
+    private void CalculateMiddleIndex() => MiddleIndex = LeftIndex + (RightIndex - LeftIndex) / 2;
+    
+    public void MoveRight() {
+        LeftIndex = MiddleIndex + 1;
+
+        CalculateMiddleIndex();
+    }
+    
+    public void MoveLeft() {
+        RightIndex = MiddleIndex - 1;
+
+        CalculateMiddleIndex();
+    }
 }
