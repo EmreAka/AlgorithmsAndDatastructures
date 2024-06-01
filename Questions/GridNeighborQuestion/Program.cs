@@ -22,7 +22,7 @@ static char[,] GetNeighbors(char[,] input)
             var neighborIndex = FindNeighborIndex(result, neighborOfValue);
 
             result[neighborIndex.x, valueIndex.y] = '1';
-            result[neighborIndex.y, valueIndex.x] = '1';
+            //result[neighborIndex.y, valueIndex.x] = '1';
         }
     }
 
