@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-Dictionary<string, string[]> graph = new()
+﻿Dictionary<string, string[]> graph = new()
 {
     { "1", ["2"] },
     { "2", ["1"] },
