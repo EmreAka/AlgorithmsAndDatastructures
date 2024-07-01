@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HasPath", "HasPath\HasPath.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndirectedPath", "UndirectedPath\UndirectedPath.csproj", "{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectedComponents", "ConnectedComponents\ConnectedComponents.csproj", "{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{BE59BFE2-6D78-4E48-8152-283713651DC9} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 		{3F8CABFB-F314-4B75-BDF1-E8C5E8EA603C} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 		{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
+		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 	EndGlobalSection
 EndGlobal
