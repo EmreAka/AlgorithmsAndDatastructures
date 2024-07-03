@@ -23,7 +23,7 @@ static int LargestComponent(Dictionary<string, string[]> graph)
 
     foreach (var node in graph.Keys)
     {
-        var (count, isEndOfIsland) = ExploreDfsIterative(graph, node, visited);
+        var (count, isEndOfIsland) = ExploreDfs(graph, node, visited);
 
         if (isEndOfIsland && count > largestComponent)
         {
@@ -34,10 +34,30 @@ static int LargestComponent(Dictionary<string, string[]> graph)
     return largestComponent;
 }
 
+static (int, bool) ExploreDfs(Dictionary<string, string[]> graph, string source, HashSet<string> visited)
+{
+    if (visited.Contains(source)) return (0, false);
+    visited.Add(source);
+    
+    var count = 1;
+
+    foreach (var neighbor in graph[source])
+    {
+        var (c, isEndOfIsland) = ExploreDfs(graph, neighbor, visited);
+
+        if (isEndOfIsland)
+        {
+            count += c;
+        }
+    }
+
+    return (count, true);
+}
+
 static (int, bool) ExploreDfsIterative(Dictionary<string, string[]> graph, string source, HashSet<string> visited)
 {
     var count = 0;
-    
+
     if (visited.Contains(source)) return (count, false);
 
     var stack = new Stack<string>();
