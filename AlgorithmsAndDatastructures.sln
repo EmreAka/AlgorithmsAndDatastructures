@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndirectedPath", "Undirecte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectedComponents", "ConnectedComponents\ConnectedComponents.csproj", "{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestComponent", "LargestComponent\LargestComponent.csproj", "{70A41EAF-DAB7-4659-87AA-1785434F272D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,5 +77,6 @@ Global
 		{3F8CABFB-F314-4B75-BDF1-E8C5E8EA603C} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 		{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
+		{70A41EAF-DAB7-4659-87AA-1785434F272D} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 	EndGlobalSection
 EndGlobal
