@@ -10,7 +10,7 @@ foreach (var number in sortedNumbers)
 
 static int[] BubbleSort(int[] source)
 {
-    for (var i = 0; i < source.Length; i++)
+    /*for (var i = 0; i < source.Length; i++)
     {
         for (var j = 0; j < source.Length - i - 1; j++)
         {
@@ -21,5 +21,18 @@ static int[] BubbleSort(int[] source)
         }
     }
     
+    return source;*/
+
+    for (int i = 0; i < source.Length; i++)
+    {
+        for (int j = 0; j < source.Length - 1 - i; j++)
+        {
+            if (source[j] > source[j + 1])
+            {
+                (source[j], source[j + 1]) = (source[j + 1], source[j]);
+            }
+        }
+    }
+
     return source;
 }

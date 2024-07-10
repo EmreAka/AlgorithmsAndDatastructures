@@ -8,24 +8,36 @@ node.Insert(21);
 var result = node.Contains(5);
 Console.WriteLine(result);
 
-node.PrintPreOrder();
+node.PrintInOrder();
 
 internal record Node(int Data)
 {
-    private Node? Left { get; set; }
-    private Node? Right { get; set; }
+    public Node? LeftNode { get; set; }
+    public Node? RightNode { get; set; }
 
     public void Insert(int data)
     {
-        if (data <= Data)
+        if (data < Data)
         {
-            if (Left is null) Left = new(data);
-            else Left.Insert(data);
+            if (LeftNode is not null)
+            {
+                LeftNode.Insert(data);
+            }
+            else
+            {
+                LeftNode = new(data);
+            }
         }
         else
         {
-            if (Right is null) Right = new(data);
-            else Right.Insert(data);
+            if (RightNode is not null)
+            {
+                RightNode.Insert(data);
+            }
+            else
+            {
+                RightNode = new(data);
+            }
         }
     }
 
@@ -35,38 +47,40 @@ internal record Node(int Data)
 
         if (data < Data)
         {
-            if (Left is null) return false;
-            return Left.Contains(data);
+            if (LeftNode is null) return false;
+            else return LeftNode.Contains(data);
         }
-
-        if (Right is null) return false;
-        return Right.Contains(data);
+        else
+        {
+            if (RightNode is null) return false;
+            else return RightNode.Contains(data);
+        }
     }
 
     public void PrintInOrder()
     {
-        Left?.PrintInOrder();
-
+        LeftNode?.PrintInOrder();
+        
         Console.WriteLine(Data);
-
-        Right?.PrintInOrder();
+        
+        RightNode?.PrintInOrder();
     }
-
+    
     public void PrintPreOrder()
     {
         Console.WriteLine(Data);
-
-        Left?.PrintPreOrder();
-
-        Right?.PrintPreOrder();
+        
+        LeftNode?.PrintInOrder();
+        
+        RightNode?.PrintInOrder();
     }
-
+    
     public void PrintPostOrder()
     {
-        Left?.PrintPostOrder();
+        LeftNode?.PrintInOrder();
 
-        Right?.PrintPostOrder();
-
+        RightNode?.PrintInOrder();
+        
         Console.WriteLine(Data);
     }
 }

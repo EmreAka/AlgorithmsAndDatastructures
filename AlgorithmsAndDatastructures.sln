@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectedComponents", "Conn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestComponent", "LargestComponent\LargestComponent.csproj", "{70A41EAF-DAB7-4659-87AA-1785434F272D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortestPath", "ShortestPath\ShortestPath.csproj", "{A9869FC9-2990-4E7C-ABDD-56A4898BF50B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70A41EAF-DAB7-4659-87AA-1785434F272D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9869FC9-2990-4E7C-ABDD-56A4898BF50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9869FC9-2990-4E7C-ABDD-56A4898BF50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9869FC9-2990-4E7C-ABDD-56A4898BF50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9869FC9-2990-4E7C-ABDD-56A4898BF50B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{FC2B29C4-0DB1-4C4D-8B3B-595C1CC98131} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 		{E8E6F154-DAE1-4C47-927A-82ECFDE98C2F} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 		{70A41EAF-DAB7-4659-87AA-1785434F272D} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
+		{A9869FC9-2990-4E7C-ABDD-56A4898BF50B} = {3D34D1E5-7B5E-45FD-9A70-BE8289F014F3}
 	EndGlobalSection
 EndGlobal
